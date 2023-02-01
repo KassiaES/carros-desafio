@@ -35,5 +35,6 @@ seja interrompido o processo de desenvolvimento;
 | ------ | ------ |
 | Site | [https://junit.org/junit5/][PlDb] |
 | User Guide | [https://junit.org/junit5/docs/current/user-guide/][PlDb] |
+| All Classes and Interfaces | [https://junit.org/junit5/docs/current/api/allclasses-index.html][PlDb] |
 | Javadoc | [https://junit.org/junit5/docs/current/api/][PlGh] |
 | Download and Install | [https://github.com/junit-team/junit4/wiki/Download-and-Install][PlGd] |
