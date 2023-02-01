@@ -33,8 +33,8 @@ seja interrompido o processo de desenvolvimento;
 
 |  JUnit | Links Úteis |
 | ------ | ------ |
-| Site | [https://junit.org/junit5/][PlDb] |
-| User Guide | [https://junit.org/junit5/docs/current/user-guide/][PlDb] |
-| All Classes and Interfaces | [https://junit.org/junit5/docs/current/api/allclasses-index.html][PlDb] |
-| Javadoc | [https://junit.org/junit5/docs/current/api/][PlGh] |
-| Download and Install | [https://github.com/junit-team/junit4/wiki/Download-and-Install][PlGd] |
+| Site | [https://junit.org/junit5/](https://junit.org/junit5/) |
+| User Guide | [https://junit.org/junit5/docs/current/user-guide/](https://junit.org/junit5/docs/current/user-guide/) |
+| All Classes and Interfaces | [https://junit.org/junit5/docs/current/api/allclasses-index.html](https://junit.org/junit5/docs/current/api/allclasses-index.html) |
+| Javadoc | [https://junit.org/junit5/docs/current/api/](https://junit.org/junit5/docs/current/api/) |
+| Download and Install | [https://github.com/junit-team/junit4/wiki/Download-and-Install](https://github.com/junit-team/junit4/wiki/Download-and-Install) |
