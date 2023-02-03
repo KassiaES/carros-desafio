@@ -1,6 +1,27 @@
 # carros-desafio
 trabalho de Testes de Unidade utilizando JUnit
 
+## Testes de Unidade
+
+Teste de unidade é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema.
+Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste.
+Uma unidade é a menor parte testável de um programa de computador.
+
+#### Seguem o princípio F.I.R.S.T.
+
+#### FAST
+Deve ser executado muito rápido
+#### INDEPENDENT
+Um teste não pode depender do outro
+#### REPEATABLE
+Devemos poder executar diversas vezes
+#### SELF_VERIFYING
+O teste sabe quando a sua execução falhou
+#### TIMELY
+Devemos escrever os testes em momento oportuno (TDD - Test Driven Development)
+
+
+
 # JUnit
 ###### _Origem: Wikipédia, a enciclopédia livre_
 
