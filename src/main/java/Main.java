@@ -26,8 +26,7 @@ public class Main {
      * - Só podemos desligar o carro quando ele parar totalmente (velocidadeAtual = 0)
      * - Não existe velocidade negativa
      * - O carro não pode passar de sua velocidade máxima
-     * - O carro inicia desligado
-     *
+     * - O carro inicia desligado     *
      */
 
     public static void main(String[] args) {

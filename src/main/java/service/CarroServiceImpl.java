@@ -6,7 +6,11 @@ public class CarroServiceImpl implements CarroService {
     @Override
     public void acelerar(Carro carro, int velocidadeAMais) {
         if(carro.isLigado()) {
-            carro.setVelocidadeAtual(carro.getVelocidadeAtual() + velocidadeAMais);
+            if (carro.getVelocidadeAtual() == carro.getVelocidadeMaxima()) {
+                carro.setVelocidadeAtual(carro.getVelocidadeMaxima());
+            } else {
+                carro.setVelocidadeAtual(carro.getVelocidadeAtual() + velocidadeAMais);
+            }
         } else {
             carro.setVelocidadeAtual(0);
         }
@@ -28,7 +32,11 @@ public class CarroServiceImpl implements CarroService {
 
     @Override
     public void desligar(Carro carro) {
-        carro.setLigado(false);
+        if (carro.getVelocidadeAtual() == 0) {
+            carro.setLigado(false);
+        } else {
+            carro.setLigado(true);
+        }
     }
 
     @Override
