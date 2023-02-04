@@ -2,15 +2,21 @@ package service;
 
 import model.Carro;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class CarroServiceTest {
+
+    CarroService carroService;
+    @Before
+    public void setup() {
+        CarroService carroService = new CarroServiceImpl();
+    }
 
     // O carro inicia desligado
     @Test
     public void umCarroDeveIniciarDesligado() {
         // Given
-        CarroService carroService = new CarroServiceImpl();
         Carro carro = new Carro("azul","fiat","uno", 2020, 100);
         // Then
         Assert.assertFalse(carro.isLigado());
