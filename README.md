@@ -64,3 +64,71 @@ seja interrompido o processo de desenvolvimento;
 | All Classes and Interfaces | [https://junit.org/junit5/docs/current/api/allclasses-index.html](https://junit.org/junit5/docs/current/api/allclasses-index.html) |
 | Javadoc | [https://junit.org/junit5/docs/current/api/](https://junit.org/junit5/docs/current/api/) |
 | Download and Install | [https://github.com/junit-team/junit4/wiki/Download-and-Install](https://github.com/junit-team/junit4/wiki/Download-and-Install) |
+
+### Diferenças entre JUnit4 e JUnit5
+
+```sh
+Annotations
+```
+>
+>Antes de cada caso de teste
+>@Before -> Junit 4
+>@BeforeEach -> Junit 5
+>
+>Após cada caso de teste
+>@After -> Junit 4
+>@AfterEach -> Junit 5
+>
+>Antes da classe de teste
+>@BeforeClass -> Junit 4
+>@BeforeAll -> Junit 5
+>
+>Após a classe de teste
+>@AfterClass -> Junit 4
+>@AfterAll -> Junit 5
+>
+>Pula um teste especifico
+>@Ignore -> Junit 4
+>@Disabled -> Junit 5
+>
+```sh
+Assertivas
+```
+>Classe das assertivas
+>Assert -> Junit 4
+>Assertion -> Junit 5
+>
+```sh
+Metodos
+```
+>fail - fail
+>assertTrue - assertTrue
+>
+>assertFalse - assertFalse
+>
+>assertSame - assertSame
+>
+>assertNotSame - assertNotSame
+>
+>assertEquals - assertEquals
+>
+>assertNotEquals - assertNotEquals
+>
+>assertThrows - assertThrows
+>
+>assertNull - assertNull
+>
+>assertNotNull - assertNotNull
+>
+>assertArrayEquals - assertArrayEquals*
+>
+>assertThat - N/A no Junit 5
+>
+>Novas Junit 5 - assertAll 
+>
+>Junit 4.13+ - assertThrows
+>
+     
+
+
+
