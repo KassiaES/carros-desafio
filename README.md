@@ -1,9 +1,7 @@
 # carros-desafio
-Trabalho de Testes de Unidade utilizando JUnit
+__Trabalho de Testes de Unidade utilizando JUnit__
 
 _Neste caso, a classe CarroServiceImpl e a interface CarroService estão com 100% Coverage_
-
-[Coverage Report](carros-desafio/ns-1/index.html)
 
 _Testes não servem para garantir a ausência de bugs, mas sua presença_
 
