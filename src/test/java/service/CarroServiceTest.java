@@ -1,6 +1,7 @@
 package service;
 
 import model.Carro;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +13,12 @@ public class CarroServiceTest {
     @Before
     public void setup() {
         CarroService carroService = new CarroServiceImpl();
+        System.out.println("Before");
+    }
+
+    @After
+    public void tearDown() {
+        System.out.println("After");
     }
 
     // O carro inicia desligado
