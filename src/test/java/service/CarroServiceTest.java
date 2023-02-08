@@ -4,6 +4,7 @@ import model.Carro;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class CarroServiceTest {
 
@@ -63,7 +64,7 @@ public class CarroServiceTest {
 
     //Enquanto o carro estiver ligado deve ser capaz de: - Acelerar
     @Test
-    public void deveAcelerarCorretamente() {
+    public void deveAcelerarCorretamente() throws Exception {
         // Given
         CarroService carroService = new CarroServiceImpl();
         Carro carro = new Carro("azul","fiat","uno", 2020, 150);
@@ -75,7 +76,7 @@ public class CarroServiceTest {
     }
 
     @Test
-    public void deveLigarCorretamenteEAcelerarCorretamente() {
+    public void deveLigarCorretamenteEAcelerarCorretamente() throws Exception {
         // Given
         CarroService carroService = new CarroServiceImpl();
         Carro celtinha = new Carro("Prata", "Chevrolet", "Celta", 2001, 50);
@@ -89,7 +90,7 @@ public class CarroServiceTest {
 
     // O carro não pode passar de sua velocidade máxima
     @Test
-    public void naoDevePassarDaVelocidadeMaxima() {
+    public void naoDevePassarDaVelocidadeMaxima() throws Exception {
         // Given
         CarroService carroService = new CarroServiceImpl();
         Carro carro = new Carro("azul","fiat","uno", 2020, 100);
@@ -103,7 +104,7 @@ public class CarroServiceTest {
 
     // Não existe velocidade negativa
     @Test
-    public void velocidadeNaoDeveSerMenorQueZero() {
+    public void velocidadeNaoDeveSerMenorQueZero() throws Exception {
         // Given
         CarroService carroService = new CarroServiceImpl();
         Carro celtinha = new Carro("Prata", "Chevrolet", "Celta", 2001, 50);
@@ -117,7 +118,7 @@ public class CarroServiceTest {
 
     // Só podemos realizar a ação de acelerar com o carro ligado
     @Test
-    public void naoDeveAcelerarDesligado() {
+    public void naoDeveAcelerarDesligado() throws Exception {
         // Given
         CarroService carroService = new CarroServiceImpl();
         Carro carro = new Carro("azul","fiat","uno", 2020, 150);
@@ -129,7 +130,7 @@ public class CarroServiceTest {
 
     // Enquanto o carro estiver ligado deve ser capaz de: - Frear
     @Test
-    public void carroLigadoDeveFrearCorretamente() {
+    public void carroLigadoDeveFrearCorretamente() throws Exception {
         // Given
         CarroService carroService = new CarroServiceImpl();
         Carro carro = new Carro("azul","fiat","uno", 2020, 150);
@@ -170,7 +171,7 @@ public class CarroServiceTest {
     }
 
     @Test
-    public void carroSoPodeDesligarSeVelocidadeIgualAZero() {
+    public void carroSoPodeDesligarSeVelocidadeIgualAZero() throws Exception {
         CarroService carroService = new CarroServiceImpl();
         // Given
         Carro carro = new Carro("azul","fiat","uno", 2020, 150);
@@ -181,6 +182,30 @@ public class CarroServiceTest {
         carroService.desligar(carro);
         // Then
         Assert.assertFalse(carro.isLigado());
+    }
+
+    @Test
+    public void deveLancarExceptionQuandoAcelerarValorNegativo() {
+        CarroService carroService = new CarroServiceImpl();
+        // Given
+        Carro carro = new Carro("cor", "marca", "corsa", 2000,100);
+        // When
+        Throwable throwable = Assertions.assertThrows(Exception.class,
+                () -> carroService.acelerar(carro, -10)
+        );
+        // Then
+        Assertions.assertEquals("A velocidade deve ser maior que zero", throwable.getMessage());
+    }
+
+    @Test
+    public void deveLancarExceptionQuandoFrearMenorQueUm() {
+        CarroService carroService = new CarroServiceImpl();
+        // Given
+        Carro carro = new Carro("cor", "marca", "corsa", 2000,100);
+        // When
+        // Lambda Functions
+        Assertions.assertThrows(Exception.class,
+                () -> carroService.frear(carro, -10)); // Then
     }
 
 }
