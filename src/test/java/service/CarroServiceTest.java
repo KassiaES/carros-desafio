@@ -3,14 +3,16 @@ package service;
 import model.Carro;
 import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 
 public class CarroServiceTest {
 
-    CarroService carroService;
-    @Before
+    CarroServiceImpl carroService;
+
+
+    @BeforeEach
     public void setup() {
         CarroService carroService = new CarroServiceImpl();
         System.out.println("Before");

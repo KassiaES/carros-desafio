@@ -3,6 +3,7 @@ import model.Carro;
 
 public class CarroServiceImpl implements CarroService {
 
+
     @Override
     public void acelerar(Carro carro, int velocidadeAMais) throws Exception {
         if(velocidadeAMais <= 0) {
@@ -16,6 +17,7 @@ public class CarroServiceImpl implements CarroService {
             } else {
                 carro.setVelocidadeAtual(carro.getVelocidadeAtual() + velocidadeAMais);
             }
+
         } else {
             carro.setVelocidadeAtual(0);
         }
